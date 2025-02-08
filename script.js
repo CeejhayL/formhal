@@ -34,10 +34,14 @@ function deleteDigit() {
 }
 
 function checkPasscode() {
-    const correctPasscode = "032323";
-    if (enteredPasscode === correctPasscode) {
+    const imgcorrectPasscode = "032323";
+    const lettcorrectPasscode = "012003";
+    if (enteredPasscode === imgcorrectPasscode) {
         window.location.href = "picture.html"; 
-    } else {
+    } else if(enteredPasscode === lettcorrectPasscode){
+        window.location.href = "letters.html";
+    }
+    else {
         alert("Incorrect passcode. Try again!");
         resetPasscode();
     }
@@ -49,16 +53,13 @@ function resetPasscode() {
     inputs.forEach(input => input.value = "");
 }
 const images = [
-    { src: "images/img1.jpg", desc: "First" },
-    { src: "image2.jpg", desc: "Description 2" },
-    { src: "image3.jpg", desc: "Description 3" },
-    { src: "image4.jpg", desc: "Description 4" },
-    { src: "image5.jpg", desc: "Description 5" },
-    { src: "image6.jpg", desc: "Description 6" },
-    { src: "image7.jpg", desc: "Description 7" },
-    { src: "image8.jpg", desc: "Description 8" },
-    { src: "image9.jpg", desc: "Description 9" },
-    { src: "image10.jpg", desc: "Description 10" }
+    { src: "images/img1.jpg", desc: "First Picture natin na maganda ang Camera hehehe. Proud ako satin kahit elementary palang natapos natin dito." },
+    { src: "images/img2.jpg", desc: "First time na makasama ka sa swimming. Muntik pa umiyak kasi muntik ka di makasama HAHAHAHA." },
+    { src: "images/img3.jpg", desc: "Second time na sumama ka sa swimming, sobrang saya ko non kasi nakasama kita ng overnight. Thank you kasi sumama ka!" },
+    { src: "images/img4.jpg", desc: "Tamang antay ng bus sa famy ng maaga, medyo antok pa. Malungkot kasi paalis ka ulit pero walang choice kasi need pumasok sa school." },
+    { src: "images/img5.jpg", desc: "National Museum, napakasaya ko niyan. Kahit pagod na kakalakad masaya padin kasi kasama ka. Soon sa Fine Arts naman." },
+    { src: "images/img6.jpg", desc: "Eto yung first time na pumunta ako sayo, sa SM na tayo nagkita kasi tinanghali na ako. Kahit wala tayo masyado ginawa niyan ansaya ko padin kasi nakasama kita." },
+    { src: "images/img7.jpg", desc: "Eto yung ihahatid dapat kita kaso punuan yung mga bus kaya no choice kundi ihatid ka, buti nakasama ako. Medyo nakakahiya lang kasi ayaw tanggapin pang gas. Sobrang saya ko dito kahit hindi nagawa plano natin na ihatid kita pa commute." },
 ];
 
 let galleryIndex = 0;
@@ -79,3 +80,4 @@ let galleryIndex = 0;
     }
 
     updateGallery();
+

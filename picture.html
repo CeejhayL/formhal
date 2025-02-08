@@ -6,14 +6,17 @@
     <title>Passcode Input</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen bg-green-100 space-y-6">
-    <h1 class="text-2xl font-bold italic text-black-800 text-center">HAPPY MOMENTS WITH YOU</h1>
+<body class="flex flex-col items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat space-y-6" 
+      style="background-image: url('images/bg.jpg');">
+    
+    <h1 class="bg-gray text-2xl font-bold italic text-red-800 text-center">HAPPY MOMENTS WITH YOU</h1>
+
     <div class="relative w-80 flex items-center justify-center">
-        <button onclick="prevImage()" class="absolute left-[-15px] top-1/2 transform -translate-y-1/2 px-3 py-2 bg-gray-500 text-white hover:bg-blue-700 ">
+        <button onclick="prevImage()" class="absolute left-[-15px] top-1/2 transform -translate-y-1/2 px-3 py-2 bg-gray-500 text-white hover:bg-blue-700">
             &#60;
         </button>
         <img id="galleryImage" src="image1.jpg" alt="Description 1" class="w-full h-auto max-h-[700px] object-cover rounded-lg">
-        <button onclick="nextImage()" class="absolute right-[-15px] top-1/2 transform -translate-y-1/2 px-3 py-2 bg-gray-500 text-white hover:bg-blue-700 ">
+        <button onclick="nextImage()" class="absolute right-[-15px] top-1/2 transform -translate-y-1/2 px-3 py-2 bg-gray-500 text-white hover:bg-blue-700">
             &#62;
         </button>
     </div>

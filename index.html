@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passcode Input</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-blue-100 space-y-6">
+    
+    <h1 class="font-bold text-5xl text-black font-pacifico">FOR MAHAL</h1>
+    <p class="italic text-2xl text-black mb-10 font-pacifico">REIGNE ARGUIDAS</p>
+
+    <div class="p-7 w-[400px] h-[500px] bg-white rounded-xl shadow-md space-y-6 text-center">
+        <h1 class="text-2xl font-bold text-gray-800 mb-[-5px]">Enter Passcode</h1>
+        <p>HINT: ANNIVERSARY</p>
+
+        <!-- Passcode Input Fields -->
+        <div class="flex justify-center space-x-3">
+            <input type="text" maxlength="1" class="passcode-input w-12 h-12 border border-blue-300 rounded-lg text-center text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+            <input type="text" maxlength="1" class="passcode-input w-12 h-12 border border-blue-300 rounded-lg text-center text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+            <input type="text" maxlength="1" class="passcode-input w-12 h-12 border border-blue-300 rounded-lg text-center text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+            <input type="text" maxlength="1" class="passcode-input w-12 h-12 border border-blue-300 rounded-lg text-center text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+            <input type="text" maxlength="1" class="passcode-input w-12 h-12 border border-blue-300 rounded-lg text-center text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+            <input type="text" maxlength="1" class="passcode-input w-12 h-12 border border-blue-300 rounded-lg text-center text-xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+        </div>
+
+        <!-- Keypad -->
+        <div class="grid grid-cols-4 gap-4 mt-6">
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(1)">1</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(2)">2</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(3)">3</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(4)">4</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(5)">5</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(6)">6</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(7)">7</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(8)">8</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(9)">9</button>
+            <button class="keypad-btn w-16 h-16 bg-gray-200 text-xl font-bold rounded-lg hover:bg-gray-300" onclick="enterDigit(0)">0</button>
+            <button class="w-16 h-16 bg-red-500 text-white text-xl font-bold rounded-lg hover:bg-red-600" onclick="deleteDigit()">⌫</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
